@@ -4,6 +4,7 @@
   import path from 'path';
 
   export default defineConfig({
+    base: '/<your-repo-name>/', // Set this to your repo name for GitHub Pages
     plugins: [react()],
     resolve: {
       extensions: ['.js', '.jsx', '.ts', '.tsx', '.json'],
