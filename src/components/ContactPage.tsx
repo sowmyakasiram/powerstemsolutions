@@ -46,19 +46,18 @@ export function ContactPage() {
     {
       icon: Phone,
       title: 'Phone',
-      details: ['+91 99946 67761'],
-      description: 'Mon-Fri from 8am to 6pm IST'
+      details: ['+91 99946 67761']
     },
     {
       icon: Mail,
       title: 'Email',
-      details: ['siva@powerstemsolutions.com', 'info@powerstemsolutions.com'],
+      details: ['siva@powerstemsolutions.com'],
       description: 'We respond within 24 hours'
     },
     {
       icon: MapPin,
       title: 'Office',
-      details: ['123 Green Energy Blvd', 'Eco City, EC 12345'],
+      details: ['45/5 Vivekananda 2 Street','Perundurai Erode, Tamil Nadu - 638052'],
       description: 'Visit us for in-person consultations'
     },
     {
