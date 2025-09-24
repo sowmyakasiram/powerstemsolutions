@@ -46,13 +46,13 @@ export function ContactPage() {
     {
       icon: Phone,
       title: 'Phone',
-      details: ['+1 (555) 123-4567', '+1 (555) 123-4568'],
-      description: 'Mon-Fri from 8am to 6pm EST'
+      details: ['+91 99946 67761'],
+      description: 'Mon-Fri from 8am to 6pm IST'
     },
     {
       icon: Mail,
       title: 'Email',
-      details: ['info@powerstemsolutions.com', 'support@powerstemsolutions.com'],
+      details: ['siva@powerstemsolutions.com', 'info@powerstemsolutions.com'],
       description: 'We respond within 24 hours'
     },
     {
@@ -294,7 +294,7 @@ export function ContactPage() {
                   <p className="text-sm text-green-700 mb-3">
                     For urgent technical issues with existing installations, our emergency support team is available 24/7.
                   </p>
-                  <p className="font-medium text-green-800">Emergency Hotline: +1 (555) 911-POWER</p>
+                  <p className="font-medium text-green-800">Emergency Hotline: +91 99946 67761</p>
                 </CardContent>
               </Card>
             </div>
