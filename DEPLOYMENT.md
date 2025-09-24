@@ -1,20 +1,41 @@
-# GitHub Pages Deployment
+# GitHub Pages Deployment (Main Branch)
 
-To deploy this Vite React app to GitHub Pages:
+This project is configured to deploy directly from the main branch using the `/docs` folder.
 
-1. Make sure you have `gh-pages` installed:
+## Deployment Process
+
+1. Build the project:
    ```sh
-   npm install --save-dev gh-pages
+   npm run build
    ```
-2. Update the `homepage` field in `package.json` to:
-   ```json
-   "homepage": "https://<your-github-username>.github.io/<your-repo-name>"
-   ```
-   Replace `<your-github-username>` and `<your-repo-name>` accordingly.
-3. Commit your changes.
-4. Deploy with:
+
+2. Deploy (builds, commits, and pushes automatically):
    ```sh
    npm run deploy
    ```
 
-The site will be available at the URL above after a few minutes.
+## GitHub Pages Configuration
+
+1. Go to your repository settings on GitHub
+2. Navigate to "Pages" section
+3. Under "Source", select "Deploy from a branch"
+4. Choose "main" branch and "/docs" folder
+5. Save the settings
+
+Your site will be available at:
+**https://sowmyakasiram.github.io/powerstemsolutions**
+
+## Manual Deployment
+
+If you prefer manual control:
+1. Run `npm run build`
+2. Commit the `docs/` folder changes
+3. Push to main branch
+4. GitHub Pages will automatically update
+
+## Benefits of Main Branch Deployment
+
+- Simpler workflow (no separate gh-pages branch)
+- Built files are part of your repository
+- Easier to track deployment history
+- No need for gh-pages dependency
