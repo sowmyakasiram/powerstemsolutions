@@ -1,2 +1,9 @@
-// This file tells GitHub Pages to serve from the /build directory
+# Node modules
+node_modules/
+
+# Build output for local development (keep docs for GitHub Pages)
 /build
+
+# Dependencies
+package-lock.json
+yarn.lock
