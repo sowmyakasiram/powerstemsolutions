@@ -58,5 +58,5 @@
           "preview": "vite preview",
           "deploy": "npm run build && git add docs && git commit -m 'Deploy to GitHub Pages' && git push origin main"
       },
-      "homepage": "https://sowmyakasiram.github.io/powerstemsolutions"
+      "homepage": "https://www.powerstemsolutions.com"
 }
