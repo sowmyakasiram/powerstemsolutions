@@ -4,7 +4,7 @@
   import path from 'path';
 
   export default defineConfig({
-    base: '/powerstemsolutions/', // Set this to your repo name for GitHub Pages
+    base: '/', // Use root for custom domain
     plugins: [react()],
     resolve: {
       extensions: ['.js', '.jsx', '.ts', '.tsx', '.json'],
