@@ -286,16 +286,6 @@ export function ContactPage() {
                   ))}
                 </div>
               </div>
-
-              <Card className="bg-green-50 border-green-200">
-                <CardContent className="p-6">
-                  <h3 className="font-semibold mb-3 text-green-800">Emergency Support</h3>
-                  <p className="text-sm text-green-700 mb-3">
-                    For urgent technical issues with existing installations, our emergency support team is available 24/7.
-                  </p>
-                  <p className="font-medium text-green-800">Emergency Hotline: +91 99946 67761</p>
-                </CardContent>
-              </Card>
             </div>
           </div>
         </div>
