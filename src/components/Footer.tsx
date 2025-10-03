@@ -8,7 +8,7 @@ export function Footer() {
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
               <img 
-                src="public/assets/images/logo.png" 
+                src="/assets/images/logo.png" 
                 alt="PowerStem Solutions" 
                 className="h-6 w-6 object-contain"
               />

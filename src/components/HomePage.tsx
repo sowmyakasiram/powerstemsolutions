@@ -48,7 +48,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
       <section className="relative py-20 lg:py-32 overflow-hidden">
         <div className="absolute inset-0">
           <img 
-            src="public/assets/background-image.jpg" 
+            src="/assets/images/background-image.jpg" 
             alt="Background" 
             className="w-full h-full object-cover"
           />
@@ -83,7 +83,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
             </div>
             <div className="relative">
               <img
-                src="/public/assets/images/logo.png"
+                src="/assets/images/logo.png"
                 alt="PowerStem Solutions"
                 className="rounded-lg shadow-2xl w-full h-[400px] object-contain bg-white p-8"
               />

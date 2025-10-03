@@ -21,7 +21,7 @@ export function Header({ currentPage, onNavigate }: HeaderProps) {
       <div className="container flex h-16 items-center">
         <div className="mr-4 flex items-center space-x-2">
           <img 
-            src="public/assets/images/logo.png" 
+            src="/assets/images/logo.png" 
             alt="PowerStem Solutions" 
             className="h-8 w-8 object-contain"
           />
