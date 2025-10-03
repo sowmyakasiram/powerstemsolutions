@@ -57,7 +57,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
         <div className="container relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
-              <h1 className="text-4xl lg:text-6xl font-bold leading-tight text-white">
+              <h1 className="text-4xl lg:text-6xl font-bold leading-tight text-black">
                 Powering a 
                 <span className="text-green-400"> Sustainable</span> Future
               </h1>
