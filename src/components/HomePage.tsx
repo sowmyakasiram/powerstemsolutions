@@ -46,15 +46,22 @@ export function HomePage({ onNavigate }: HomePageProps) {
     <div className="min-h-screen">
       {/* Hero Section */}
       <section className="relative py-20 lg:py-32 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-green-50 to-blue-50" />
+        <div className="absolute inset-0">
+          <img 
+            src="public/assets/background-image.jpg" 
+            alt="Background" 
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-black bg-opacity-40" />
+        </div>
         <div className="container relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
-              <h1 className="text-4xl lg:text-6xl font-bold leading-tight">
+              <h1 className="text-4xl lg:text-6xl font-bold leading-tight text-white">
                 Powering a 
-                <span className="text-green-600"> Sustainable</span> Future
+                <span className="text-green-400"> Sustainable</span> Future
               </h1>
-              <p className="text-xl text-gray-600 leading-relaxed">
+              <p className="text-xl text-gray-200 leading-relaxed">
                 Leading clean energy solutions provider specializing in solar, wind, power trading, and sustainability consulting. Transform your energy landscape with our expert guidance.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
@@ -87,15 +94,15 @@ export function HomePage({ onNavigate }: HomePageProps) {
       </section>
 
       {/* Stats Section */}
-      <section className="py-16 bg-gray-900 text-white">
+      <section className="py-16 bg-slate-800 text-white">
         <div className="container">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
               <div key={index} className="text-center">
-                <div className="text-3xl lg:text-4xl font-bold text-green-400 mb-2">
+                <div className="text-3xl lg:text-4xl font-bold text-slate-300 mb-2">
                   {stat.number}
                 </div>
-                <div className="text-gray-300">{stat.label}</div>
+                <div className="text-slate-400">{stat.label}</div>
               </div>
             ))}
           </div>
@@ -103,7 +110,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
       </section>
 
       {/* Services Section */}
-      <section className="py-20">
+      <section className="py-20 bg-gray-50">
         <div className="container">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold mb-4">
@@ -208,7 +215,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-green-600 text-white">
+      <section className="py-20 bg-slate-700 text-white">
         <div className="container text-center">
           <h2 className="text-3xl lg:text-4xl font-bold mb-4">
             Ready to Go Green?
@@ -227,7 +234,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
             <Button 
               size="lg" 
               variant="outline" 
-              className="border-white text-white hover:bg-white hover:text-green-600"
+              className="border-white text-white hover:bg-white hover:text-slate-700"
               onClick={() => onNavigate('services')}
             >
               Learn More
