@@ -75,17 +75,12 @@ export function HomePage({ onNavigate }: HomePageProps) {
               </div>
             </div>
             <div className="relative">
-              <ImageWithFallback
-                src="https://images.unsplash.com/photo-1722750813160-d58602421953?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxyZW5ld2FibGUlMjBlbmVyZ3klMjBzb2x1dGlvbnN8ZW58MXx8fHwxNzU4NzAzNDEwfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-                alt="Renewable Energy Solutions"
-                className="rounded-lg shadow-2xl w-full h-[400px] object-cover"
+              <img
+                src="/public/assets/images/logo.png"
+                alt="PowerStem Solutions"
+                className="rounded-lg shadow-2xl w-full h-[400px] object-contain bg-white p-8"
               />
-              <div className="absolute -bottom-4 -left-4 bg-white p-4 rounded-lg shadow-lg">
-                <div className="flex items-center space-x-2">
-                  <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse" />
-                  <span className="text-sm font-medium">Clean Energy Active</span>
-                </div>
-              </div>
+            
             </div>
           </div>
         </div>
@@ -160,7 +155,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
         <div className="container">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <ImageWithFallback
+               <ImageWithFallback
                 src="https://images.unsplash.com/photo-1678699255640-a1b75cec7718?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxncmVlbiUyMHN1c3RhaW5hYmlsaXR5JTIwYnVzaW5lc3N8ZW58MXx8fHwxNzU4NzAzNDEwfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
                 alt="Green Sustainability Business"
                 className="rounded-lg shadow-lg w-full h-[400px] object-cover"
@@ -240,6 +235,8 @@ export function HomePage({ onNavigate }: HomePageProps) {
           </div>
         </div>
       </section>
+
+     
     </div>
   );
 }
