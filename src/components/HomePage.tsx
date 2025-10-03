@@ -58,8 +58,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
               <h1 className="text-4xl lg:text-6xl font-bold leading-tight text-black">
-                Powering a 
-                <span className="text-green-400"> Sustainable</span> Future
+                Powering a Sustainable Future
               </h1>
               <p className="text-xl text-gray-200 leading-relaxed">
                 Leading clean energy solutions provider specializing in solar, wind, power trading, and sustainability consulting. Transform your energy landscape with our expert guidance.
