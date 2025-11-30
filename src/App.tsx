@@ -4,6 +4,7 @@ import { Footer } from './components/Footer';
 import { HomePage } from './components/HomePage';
 import { ServicesPage } from './components/ServicesPage';
 import { ContactPage } from './components/ContactPage';
+import { PremiumBackground } from './components/PremiumBackground';
 
 export default function App() {
   const [currentPage, setCurrentPage] = useState('home');
@@ -28,12 +29,15 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col">
-      <Header currentPage={currentPage} onNavigate={handleNavigate} />
-      <main className="flex-1">
-        {renderCurrentPage()}
-      </main>
-      <Footer />
-    </div>
+    <>
+      <PremiumBackground />
+      <div className="min-h-screen flex flex-col relative">
+        <Header currentPage={currentPage} onNavigate={handleNavigate} />
+        <main className="flex-1 pt-24">
+          {renderCurrentPage()}
+        </main>
+        <Footer />
+      </div>
+    </>
   );
 }

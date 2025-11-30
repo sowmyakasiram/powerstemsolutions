@@ -136,18 +136,18 @@ export function ServicesPage({ onNavigate }: ServicesPageProps) {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-green-50 to-blue-50">
+      <section className="py-20 energy-flow border-b border-white/10">
         <div className="container">
           <div className="text-center max-w-3xl mx-auto">
             <h1 className="text-4xl lg:text-5xl font-bold mb-6">
-              Comprehensive Clean Energy Services
+              <span className="holographic-text">Comprehensive Clean Energy Services</span>
             </h1>
-            <p className="text-xl text-gray-600 mb-8">
+            <p className="text-xl text-slate-700 mb-8">
               From solar installations to sustainability consulting, we provide end-to-end solutions for your renewable energy needs.
             </p>
             <Button 
               size="lg"
-              className="bg-green-600 hover:bg-green-700"
+              className="liquid-button text-slate-900 font-semibold"
               onClick={() => onNavigate('contact')}
             >
               Start Your Project Today
@@ -164,45 +164,45 @@ export function ServicesPage({ onNavigate }: ServicesPageProps) {
               <div key={service.id} className={`grid lg:grid-cols-2 gap-12 items-center ${index % 2 === 1 ? 'lg:grid-flow-col-dense' : ''}`}>
                 <div className={`space-y-6 ${index % 2 === 1 ? 'lg:col-start-2' : ''}`}>
                   <div className="flex items-center space-x-3">
-                    <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center">
-                      <service.icon className="h-6 w-6 text-green-600" />
+                    <div className="w-12 h-12 crystal-surface rounded-lg flex items-center justify-center liquid-glow">
+                      <service.icon className="h-6 w-6 text-slate-600" />
                     </div>
                     <div>
-                      <h2 className="text-3xl font-bold">{service.title}</h2>
-                      <p className="text-green-600 font-medium">{service.subtitle}</p>
+                      <h2 className="text-3xl font-bold text-slate-900">{service.title}</h2>
+                      <p className="chromatic-text font-medium">{service.subtitle}</p>
                     </div>
                   </div>
 
-                  <p className="text-lg text-gray-600 leading-relaxed">
+                  <p className="text-lg text-slate-700 leading-relaxed">
                     {service.description}
                   </p>
 
                   <div className="space-y-4">
-                    <h3 className="font-semibold text-lg">What We Offer:</h3>
+                    <h3 className="font-semibold text-lg text-slate-900">What We Offer:</h3>
                     <div className="grid sm:grid-cols-2 gap-2">
                       {service.features.map((feature, idx) => (
                         <div key={idx} className="flex items-center space-x-2">
-                          <CheckCircle className="h-4 w-4 text-green-600 flex-shrink-0" />
-                          <span className="text-sm text-gray-600">{feature}</span>
+                          <CheckCircle className="h-4 w-4 text-slate-600 flex-shrink-0" />
+                          <span className="text-sm text-slate-700">{feature}</span>
                         </div>
                       ))}
                     </div>
                   </div>
 
                   <div className="space-y-4">
-                    <h3 className="font-semibold text-lg">Key Benefits:</h3>
+                    <h3 className="font-semibold text-lg text-slate-900">Key Benefits:</h3>
                     <div className="space-y-2">
                       {service.benefits.map((benefit, idx) => (
                         <div key={idx} className="flex items-center space-x-2">
-                          <ArrowRight className="h-4 w-4 text-green-600 flex-shrink-0" />
-                          <span className="text-sm text-gray-600">{benefit}</span>
+                          <ArrowRight className="h-4 w-4 text-slate-600 flex-shrink-0" />
+                          <span className="text-sm text-slate-700">{benefit}</span>
                         </div>
                       ))}
                     </div>
                   </div>
 
                   <Button 
-                    className="bg-green-600 hover:bg-green-700"
+                    className="liquid-button text-slate-900 font-semibold"
                     onClick={() => onNavigate('contact')}
                   >
                     Get Quote for {service.title}
@@ -210,11 +210,14 @@ export function ServicesPage({ onNavigate }: ServicesPageProps) {
                 </div>
 
                 <div className={`${index % 2 === 1 ? 'lg:col-start-1 lg:row-start-1' : ''}`}>
-                  <ImageWithFallback
-                    src={service.image}
-                    alt={service.title}
-                    className="rounded-lg shadow-lg w-full h-[400px] object-cover"
-                  />
+                  <div className="relative">
+                    <div className="absolute inset-0 bg-gradient-to-tr from-green-500/20 to-blue-500/20 rounded-lg blur-3xl" />
+                    <ImageWithFallback
+                      src={service.image}
+                      alt={service.title}
+                      className="rounded-lg shadow-lg w-full h-[400px] object-cover relative border border-white/10"
+                    />
+                  </div>
                 </div>
               </div>
             ))}
@@ -223,31 +226,31 @@ export function ServicesPage({ onNavigate }: ServicesPageProps) {
       </section>
 
       {/* Process Section */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 liquid-glass border-y border-white/10">
         <div className="container">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold mb-4">
-              Our Proven Process
+              <span className="holographic-text">Our Proven Process</span>
             </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            <p className="text-xl text-slate-700 max-w-2xl mx-auto">
               We follow a systematic approach to ensure your clean energy project is delivered on time, on budget, and exceeds expectations.
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {processSteps.map((step, index) => (
-              <Card key={index} className="text-center relative">
+              <Card key={index} className="text-center relative liquid-card iridescent-border liquid-glow">
                 <CardHeader className="pb-4">
-                  <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <step.icon className="h-8 w-8 text-green-600" />
+                  <div className="w-16 h-16 crystal-surface rounded-full flex items-center justify-center mx-auto mb-4">
+                    <step.icon className="h-8 w-8 text-slate-600" />
                   </div>
-                  <div className="absolute -top-3 -right-3 w-8 h-8 bg-green-600 text-white rounded-full flex items-center justify-center text-sm font-bold">
+                  <div className="absolute -top-3 -right-3 w-8 h-8 holographic-gradient text-slate-900 rounded-full flex items-center justify-center text-sm font-bold shadow-lg">
                     {index + 1}
                   </div>
-                  <CardTitle className="text-xl">{step.title}</CardTitle>
+                  <CardTitle className="text-xl text-slate-900">{step.title}</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <CardDescription className="text-base">
+                  <CardDescription className="text-base text-slate-700">
                     {step.description}
                   </CardDescription>
                 </CardContent>
@@ -258,26 +261,25 @@ export function ServicesPage({ onNavigate }: ServicesPageProps) {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-green-600 text-white">
-        <div className="container text-center">
+      <section className="py-20 holographic-gradient text-slate-900 relative overflow-hidden">
+        <div className="container text-center relative">
           <h2 className="text-3xl lg:text-4xl font-bold mb-6">
             Ready to Transform Your Energy Future?
           </h2>
-          <p className="text-xl mb-8 max-w-2xl mx-auto">
+          <p className="text-xl mb-8 max-w-2xl mx-auto text-slate-800">
             Let our experts help you choose the right clean energy solution for your needs. Contact us today for a free consultation.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button 
               size="lg" 
-              variant="secondary"
+              className="crystal-surface text-slate-900 hover:scale-105 transition-transform font-semibold"
               onClick={() => onNavigate('contact')}
             >
               Schedule Consultation
             </Button>
             <Button 
               size="lg" 
-              variant="outline" 
-              className="border-white text-white hover:bg-white hover:text-green-600"
+              className="liquid-glass border-slate-400 text-slate-900 hover:bg-slate-200/50 font-semibold"
               onClick={() => onNavigate('home')}
             >
               Learn About Us

@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Button } from './ui/button';
-import { Menu, X, Zap } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
+import logo from '../assets/205b05877122ea0ef4940e05207ea62b694ea64e.png';
 
 interface HeaderProps {
   currentPage: string;
@@ -17,18 +18,18 @@ export function Header({ currentPage, onNavigate }: HeaderProps) {
   ];
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-16 items-center">
-        <div className="mr-4 flex items-center space-x-2">
+    <header className="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[95%] max-w-6xl liquid-header">
+      <div className="px-6 flex h-16 items-center justify-center">
+        <button 
+          onClick={() => onNavigate('home')}
+          className="mr-4 flex items-center hover:opacity-80 transition-opacity"
+        >
           <img 
-            src="/assets/images/logo.png" 
-            alt="PowerStem Solutions" 
-            className="h-8 w-8 object-contain"
+            src={logo} 
+            alt="PowerStemSolutions" 
+            className="h-10 w-auto"
           />
-          <span className="hidden font-bold sm:inline-block">
-            PowerStemSolutions
-          </span>
-        </div>
+        </button>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-6 text-sm font-medium">
@@ -36,10 +37,10 @@ export function Header({ currentPage, onNavigate }: HeaderProps) {
             <button
               key={item.id}
               onClick={() => onNavigate(item.id)}
-              className={`transition-colors hover:text-foreground/80 ${
+              className={`transition-colors hover:text-slate-900 ${
                 currentPage === item.id 
-                  ? 'text-foreground' 
-                  : 'text-foreground/60'
+                  ? 'text-slate-900 font-semibold' 
+                  : 'text-slate-600'
               }`}
             >
               {item.label}
@@ -55,7 +56,7 @@ export function Header({ currentPage, onNavigate }: HeaderProps) {
           {/* Mobile menu button */}
           <Button
             variant="ghost"
-            className="md:hidden"
+            className="md:hidden text-slate-900 hover:text-slate-700 hover:bg-slate-200/50 liquid-glow"
             size="sm"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
@@ -67,8 +68,8 @@ export function Header({ currentPage, onNavigate }: HeaderProps) {
 
       {/* Mobile Navigation */}
       {isMenuOpen && (
-        <div className="border-b md:hidden">
-          <nav className="container flex flex-col space-y-4 py-4">
+        <div className="absolute top-full left-0 right-0 mt-2 border border-slate-300/40 md:hidden liquid-glass rounded-3xl">
+          <nav className="px-6 flex flex-col space-y-4 py-4">
             {navItems.map((item) => (
               <button
                 key={item.id}
@@ -76,10 +77,10 @@ export function Header({ currentPage, onNavigate }: HeaderProps) {
                   onNavigate(item.id);
                   setIsMenuOpen(false);
                 }}
-                className={`text-left transition-colors hover:text-foreground/80 ${
+                className={`text-left transition-colors hover:text-slate-900 ${
                   currentPage === item.id 
-                    ? 'text-foreground' 
-                    : 'text-foreground/60'
+                    ? 'text-slate-900 font-semibold' 
+                    : 'text-slate-600'
                 }`}
               >
                 {item.label}
