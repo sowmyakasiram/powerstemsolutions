@@ -1,7 +1,7 @@
 
-  # Powerstem Solutions Website
+  # Corporate Sustainability Website Design
 
-  This is a code bundle for Powerstem Solutions Website. The original project is available at https://www.figma.com/design/dXgT84fKNlKXDPM342xXMX/Powerstem-Solutions-Website.
+  This is a code bundle for Corporate Sustainability Website Design. The original project is available at https://www.figma.com/design/EUrvODTob18qNMKFZFpzPY/Corporate-Sustainability-Website-Design.
 
   ## Running the code
 
