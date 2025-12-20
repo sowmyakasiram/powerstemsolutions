@@ -3,7 +3,8 @@ import { LiquidIcon } from '../components/LiquidIcon';
 import { GlassCard } from '../components/GlassCard';
 import { Link } from '../components/Link';
 import { ImageWithFallback } from '../components/figma/ImageWithFallback';
-import logoImage from '../components/figma/logo.png';
+// Use static asset served from Vite public directory
+const logoImage = '/assets/images/logo.png';
 
 
 export function HomePage() {
