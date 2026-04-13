@@ -1,41 +1,23 @@
-# GitHub Pages Deployment (Main Branch)
+# GitHub Pages Deployment (GitHub Actions)
 
-This project is configured to deploy directly from the main branch using the `/docs` folder.
+For custom domains + SSL, GitHub Pages tends to be most reliable when the site is deployed as a Pages artifact (served at `/`) rather than using the legacy “Deploy from a branch” + `/docs` folder approach.
 
-## Deployment Process
+This repo includes a workflow at `.github/workflows/pages.yml` that builds the Vite site and deploys it to GitHub Pages.
 
-1. Build the project:
-   ```sh
-   npm run build
-   ```
-
-2. Deploy (builds, commits, and pushes automatically):
-   ```sh
-   npm run deploy
-   ```
-
-## GitHub Pages Configuration
+## One-time GitHub Pages setup
 
 1. Go to your repository settings on GitHub
-2. Navigate to "Pages" section
-3. Under "Source", select "Deploy from a branch"
-4. Choose "main" branch and "/docs" folder
-5. Save the settings
+2. Navigate to **Pages**
+3. Under **Build and deployment** → **Source**, select **GitHub Actions**
+4. (Optional) Set **Custom domain** to match `public/CNAME`
+5. Enable **Enforce HTTPS** once it becomes available
 
-Your site will be available at:
-**https://sowmyakasiram.github.io/powerstemsolutions**
+## Deploy
 
-## Manual Deployment
+- Push to `main`.
+- GitHub Actions will run the workflow and publish the site.
 
-If you prefer manual control:
-1. Run `npm run build`
-2. Commit the `docs/` folder changes
-3. Push to main branch
-4. GitHub Pages will automatically update
+## Custom domain notes
 
-## Benefits of Main Branch Deployment
-
-- Simpler workflow (no separate gh-pages branch)
-- Built files are part of your repository
-- Easier to track deployment history
-- No need for gh-pages dependency
+- The domain for Pages is sourced from `public/CNAME` (Vite copies it into the build output).
+- Keep the Pages **Custom domain** setting and `public/CNAME` in sync (either apex like `powerstemsolutions.com` or `www.powerstemsolutions.com`).

@@ -1,17 +1,28 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
-# GitHub Pages HTTPS Enforcement Script
-# This ensures HTTPS is enforced for the custom domain
+set -euo pipefail
 
-echo "Configuring HTTPS enforcement for www.powerstemsolutions.com"
+# GitHub Pages helper
+# - Ensures `public/CNAME` and `public/.nojekyll` exist so they are included in the built site.
+# - HTTPS enforcement itself is controlled in GitHub Pages settings ("Enforce HTTPS").
 
-# Ensure CNAME file exists
-echo "www.powerstemsolutions.com" > CNAME
+DOMAIN="${1:-}"
+if [[ -z "$DOMAIN" ]]; then
+	if [[ -f "public/CNAME" ]]; then
+		DOMAIN="$(cat public/CNAME | tr -d '[:space:]')"
+	fi
+fi
 
-# Create .nojekyll file to bypass Jekyll processing if using static files
-touch .nojekyll
+if [[ -z "$DOMAIN" ]]; then
+	echo "Usage: ./deploy-https.sh <custom-domain>" >&2
+	echo "Example: ./deploy-https.sh powerstemsolutions.com" >&2
+	exit 1
+fi
 
-echo "HTTPS enforcement configuration complete"
-echo "Domain: www.powerstemsolutions.com"
-echo "HTTPS: Enforced"
-echo "Make sure to enable 'Enforce HTTPS' in GitHub Pages settings"
+mkdir -p public
+echo "$DOMAIN" > public/CNAME
+touch public/.nojekyll
+
+echo "Configured GitHub Pages domain artifacts"
+echo "Domain: $DOMAIN"
+echo "Next: enable 'Enforce HTTPS' in GitHub Pages settings when available"

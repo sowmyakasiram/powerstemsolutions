@@ -75,7 +75,13 @@ export function Footer() {
               </li>
               <li className="flex items-start gap-2 text-[var(--muted-foreground)] text-sm">
                 <MapPin className="w-4 h-4 text-[var(--secondary)] flex-shrink-0 mt-0.5" />
-                <span>44/5, Vivekananda Second Street, Perundurai, Erode, Tamilnadu - 638052</span>
+                <span>
+                  1st Floor, L.S.Building, Annamalai St
+                  <br />
+                  Vengatappa Gounder Layout
+                  <br />
+                  Erode-638004, Tamilnadu, India
+                </span>
               </li>
             </ul>
           </div>

@@ -4,6 +4,11 @@ import { LiquidIcon } from '../components/LiquidIcon';
 import { GlassCard } from '../components/GlassCard';
 
 export function ContactPage() {
+  const addressText =
+    '1st Floor, L.S.Building, Annamalai St, Vengatappa Gounder Layout, Erode-638004, Tamilnadu, India';
+  const mapsLink = `https://maps.google.com/?q=${encodeURIComponent(addressText)}`;
+  const mapsEmbedSrc = `https://www.google.com/maps?q=${encodeURIComponent(addressText)}&output=embed`;
+
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -57,8 +62,16 @@ export function ContactPage() {
     {
       icon: <MapPin className="w-6 h-6" />,
       title: 'Address',
-      value: '44/5, Vivekananda Second Street, Perundurai, Erode, Tamilnadu - 638052',
-      link: 'https://maps.google.com/?q=44/5,+Vivekananda+Second+Street,+Perundurai,+Erode,+Tamilnadu+-+638052',
+      value: (
+        <>
+          1st Floor, L.S.Building, Annamalai St
+          <br />
+          Vengatappa Gounder Layout
+          <br />
+          Erode-638004, Tamilnadu, India
+        </>
+      ),
+      link: mapsLink,
       color: 'primary' as const,
     },
   ];
@@ -217,7 +230,7 @@ export function ContactPage() {
           <GlassCard className="overflow-hidden" hover={false}>
             <div className="relative w-full h-96 rounded-2xl overflow-hidden">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3912.4567890123456!2d77.58!3d11.28!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTHCsDE2JzQ4LjAiTiA3N8KwMzQnNDguMCJF!5e0!3m2!1sen!2sin!4v1234567890123!5m2!1sen!2sin&q=44/5,+Vivekananda+Second+Street,+Perundurai,+Erode,+Tamilnadu+-+638052"
+                src={mapsEmbedSrc}
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}

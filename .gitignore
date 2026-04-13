@@ -1,9 +1,12 @@
 # Node modules
 node_modules/
 
-# Build output for local development (keep docs for GitHub Pages)
-/build
+# Vite cache
+.vite/
 
-# Dependencies
-package-lock.json
-yarn.lock
+# Build output (GitHub Pages deploy uses Actions artifacts)
+dist/
+
+# Lockfiles (keep tracked for reproducible installs)
+# package-lock.json
+# yarn.lock
