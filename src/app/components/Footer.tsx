@@ -39,6 +39,11 @@ export function Footer() {
                   Services
                 </Link>
               </li>
+               <li>
+                <Link href="/product" className="text-[var(--muted-foreground)] hover:text-[var(--secondary)] transition-colors text-sm">
+                  Product
+                </Link>
+              </li>
               <li>
                 <Link href="/contact" className="text-[var(--muted-foreground)] hover:text-[var(--secondary)] transition-colors text-sm">
                   Contact

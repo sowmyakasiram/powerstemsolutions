@@ -41,6 +41,13 @@ export function Header() {
               Services
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[var(--secondary)] transition-all group-hover:w-full" />
             </Link>
+             <Link
+              href="/product"
+              className="text-[var(--foreground)] hover:text-[var(--secondary)] transition-colors relative group"
+            >
+              Product
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[var(--secondary)] transition-all group-hover:w-full" />
+            </Link>
             <Link
               href="/contact"
               className="text-[var(--foreground)] hover:text-[var(--secondary)] transition-colors relative group"
